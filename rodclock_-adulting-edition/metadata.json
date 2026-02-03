@@ -1,0 +1,5 @@
+{
+  "name": "RodClock: Adulting Edition",
+  "description": "A simple, offline-first time clock for tracking shifts and hours with monthly archiving and CSV export.",
+  "requestFramePermissions": []
+}
