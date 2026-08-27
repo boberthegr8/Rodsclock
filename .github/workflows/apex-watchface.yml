@@ -1,0 +1,43 @@
+name: Build Apex Watch Face
+
+on:
+  push:
+    branches:
+      - apex-watchface-v1
+      - main
+    paths:
+      - 'apex-watchface/**'
+      - '.github/workflows/apex-watchface.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apex-watchface
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Build debug APK
+        run: gradle assembleDebug --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Apex-WatchFace-v1-debug
+          path: apex-watchface/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
