@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_face_name">Apex</string>
+    <string name="theme_label">Accent</string>
+    <string name="theme_cyan">Cyan</string>
+    <string name="theme_green">Emerald</string>
+    <string name="theme_lime">Lime</string>
+    <string name="theme_yellow">Gold</string>
+    <string name="theme_orange">Amber</string>
+    <string name="theme_red">Crimson</string>
+    <string name="theme_pink">Rose</string>
+    <string name="theme_purple">Violet</string>
+    <string name="theme_white">Monochrome</string>
+    <string name="theme_steel">Steel</string>
+    <string name="left_slot">Left</string>
+    <string name="middle_slot">Center</string>
+    <string name="right_slot">Right</string>
+</resources>
